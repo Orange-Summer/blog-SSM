@@ -1,0 +1,39 @@
+2022-01-14 11:22:29.129  INFO 5776 --- [restartedMain] com.backend.BackendApplication           : Starting BackendApplication on OrangeSummer with PID 5776 (D:\blog\backend-mybatis\target\classes started by 10177 in D:\blog\backend-mybatis)
+2022-01-14 11:22:29.133  INFO 5776 --- [restartedMain] com.backend.BackendApplication           : The following profiles are active: dev
+2022-01-14 11:22:29.169  INFO 5776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-14 11:22:29.169  INFO 5776 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-14 11:22:30.241  INFO 5776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-14 11:22:30.249  INFO 5776 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-14 11:22:30.249  INFO 5776 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-01-14 11:22:30.323  INFO 5776 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-14 11:22:30.324  INFO 5776 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1152 ms
+2022-01-14 11:22:30.810  INFO 5776 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-14 11:22:30.880  INFO 5776 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-01-14 11:22:30.937  WARN 5776 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-01-14 11:22:31.199  INFO 5776 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-01-14 11:22:31.228  INFO 5776 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-14 11:22:31.236  INFO 5776 --- [restartedMain] com.backend.BackendApplication           : Started BackendApplication in 2.476 seconds (JVM running for 3.59)
+2022-01-14 11:22:39.565  INFO 5776 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1642070305; _ga_899CDMSX4P=GS1.1.1642070304.27.1.1642070364.0] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2022-01-14 11:22:39.571  INFO 5776 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-14 11:22:39.572  INFO 5776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-14 11:22:39.579  INFO 5776 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-01-14 11:22:39.604  INFO 5776 --- [http-nio-8080-exec-1] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:22:39.621  INFO 5776 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-14 11:22:40.420  INFO 5776 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-14 11:22:40.510  INFO 5776 --- [http-nio-8080-exec-1] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:16.796  INFO 5776 --- [http-nio-8080-exec-8] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:16.805  INFO 5776 --- [http-nio-8080-exec-8] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:19.664  INFO 5776 --- [http-nio-8080-exec-5] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:19.672  INFO 5776 --- [http-nio-8080-exec-5] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:21.586  INFO 5776 --- [http-nio-8080-exec-2] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:21.600  INFO 5776 --- [http-nio-8080-exec-2] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:23.626  INFO 5776 --- [http-nio-8080-exec-4] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:23.633  INFO 5776 --- [http-nio-8080-exec-4] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:26.449  INFO 5776 --- [http-nio-8080-exec-5] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:26.458  INFO 5776 --- [http-nio-8080-exec-5] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:28.433  INFO 5776 --- [http-nio-8080-exec-1] com.backend.aspect.LogAspect             : Request : {url='http://localhost:8080/', ip='0:0:0:0:0:0:0:1', classMethod='com.backend.controller.IndexController.index', args=[{}, null]}
+2022-01-14 11:23:28.444  INFO 5776 --- [http-nio-8080-exec-1] com.backend.aspect.LogAspect             : Result : index
+2022-01-14 11:23:55.220  INFO 5776 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-14 11:23:55.220  INFO 5776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-14 11:23:55.229  INFO 5776 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

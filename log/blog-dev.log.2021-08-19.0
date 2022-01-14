@@ -1,0 +1,68 @@
+2021-08-19 18:13:51.980  INFO 12752 --- [restartedMain] com.backend.BackendApplication           : Starting BackendApplication on DESKTOP-07M10S7 with PID 12752 (D:\blog\backend-mybatis\target\classes started by 10177 in D:\blog\backend-mybatis)
+2021-08-19 18:13:51.985  INFO 12752 --- [restartedMain] com.backend.BackendApplication           : The following profiles are active: dev
+2021-08-19 18:13:52.021  INFO 12752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-19 18:13:52.021  INFO 12752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-19 18:13:53.030  INFO 12752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-19 18:13:53.038  INFO 12752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-19 18:13:53.038  INFO 12752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-19 18:13:53.107  INFO 12752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-19 18:13:53.108  INFO 12752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1086 ms
+2021-08-19 18:13:53.572  INFO 12752 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-19 18:13:53.642  INFO 12752 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-19 18:13:53.694  WARN 12752 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-08-19 18:13:53.973  INFO 12752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-19 18:13:54.000  INFO 12752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-19 18:13:54.009  INFO 12752 --- [restartedMain] com.backend.BackendApplication           : Started BackendApplication in 2.456 seconds (JVM running for 3.575)
+2021-08-19 18:14:01.088  INFO 12752 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-19 18:14:01.088  INFO 12752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-19 18:14:01.097  INFO 12752 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2021-08-19 18:14:05.875  INFO 12752 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-19 18:14:06.607  INFO 12752 --- [http-nio-8080-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-19 19:06:04.371  INFO 12752 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-19 19:06:04.372  INFO 12752 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-19 19:06:04.381  INFO 12752 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-19 20:40:18.323  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : Starting BackendApplication on DESKTOP-07M10S7 with PID 10316 (D:\blog\backend-mybatis\target\classes started by 10177 in D:\blog\backend-mybatis)
+2021-08-19 20:40:18.326  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : The following profiles are active: dev
+2021-08-19 20:40:18.365  INFO 10316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-08-19 20:40:18.365  INFO 10316 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-08-19 20:40:19.327  INFO 10316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-19 20:40:19.334  INFO 10316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-19 20:40:19.334  INFO 10316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-19 20:40:19.406  INFO 10316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-19 20:40:19.406  INFO 10316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
+2021-08-19 20:40:19.886  INFO 10316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-19 20:40:19.954  INFO 10316 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-19 20:40:20.008  WARN 10316 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-08-19 20:40:20.220  INFO 10316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-19 20:40:20.261  INFO 10316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-19 20:40:20.269  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : Started BackendApplication in 2.315 seconds (JVM running for 3.282)
+2021-08-19 20:40:25.314  INFO 10316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-19 20:40:25.314  INFO 10316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-19 20:40:25.319  INFO 10316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2021-08-19 20:40:30.188  INFO 10316 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-08-19 20:40:30.858  INFO 10316 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-08-19 20:41:21.080  INFO 10316 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-19 20:41:21.081  INFO 10316 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-08-19 20:41:21.090  INFO 10316 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-08-19 20:41:21.293  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : Starting BackendApplication on DESKTOP-07M10S7 with PID 10316 (D:\blog\backend-mybatis\target\classes started by 10177 in D:\blog\backend-mybatis)
+2021-08-19 20:41:21.293  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : The following profiles are active: dev
+2021-08-19 20:41:21.573  INFO 10316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-19 20:41:21.573  INFO 10316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-19 20:41:21.573  INFO 10316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-19 20:41:21.596  INFO 10316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-19 20:41:21.597  INFO 10316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 301 ms
+2021-08-19 20:41:21.784  INFO 10316 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-19 20:41:21.820  INFO 10316 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-08-19 20:41:21.847  WARN 10316 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-08-19 20:41:21.987  INFO 10316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-08-19 20:41:21.997  INFO 10316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-19 20:41:21.999  INFO 10316 --- [restartedMain] com.backend.BackendApplication           : Started BackendApplication in 0.74 seconds (JVM running for 65.012)
+2021-08-19 20:41:22.001  INFO 10316 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2021-08-19 20:41:25.381  INFO 10316 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-19 20:41:25.382  INFO 10316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-08-19 20:41:25.390  INFO 10316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2021-08-19 20:41:29.766  INFO 10316 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-08-19 20:41:29.779  INFO 10316 --- [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-08-19 20:42:21.500  INFO 10316 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-19 20:42:21.501  INFO 10316 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-08-19 20:42:21.507  INFO 10316 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.backend.mapperservice.BlogMapper">
+
+    <resultMap type="com.backend.po.Blog" id="BlogMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="content" column="content" jdbcType="VARCHAR"/>
+        <result property="firstPicture" column="first_picture" jdbcType="VARCHAR"/>
+        <result property="flag" column="flag" jdbcType="VARCHAR"/>
+        <result property="views" column="views" jdbcType="INTEGER"/>
+        <result property="appreciation" column="appreciation" jdbcType="INTEGER"/>
+        <result property="shareStatement" column="share_statement" jdbcType="INTEGER"/>
+        <result property="commentabled" column="commentabled" jdbcType="INTEGER"/>
+        <result property="published" column="published" jdbcType="INTEGER"/>
+        <result property="recommend" column="recommend" jdbcType="INTEGER"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="uid" column="uid" jdbcType="INTEGER"/>
+        <result property="type" column="type" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <!--新增所有列-->
+    <insert id="saveBlog" keyProperty="id" useGeneratedKeys="true">
+        insert into blog.t_blog(title, description, content, first_picture, flag, views, appreciation, share_statement,
+                                commentabled,
+                                published, recommend, create_time, update_time, uid)
+        values (#{title}, #{description}, #{content}, #{firstPicture}, #{flag}, #{views}, #{appreciation},
+                #{shareStatement},
+                #{commentabled}, #{published}, #{recommend}, #{createTime}, #{updateTime}, #{uid})
+    </insert>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="BlogMap">
+        select b.id,
+               title,
+               description,
+               content,
+               first_picture,
+               flag,
+               views,
+               appreciation,
+               share_statement,
+               commentabled,
+               published,
+               recommend,
+               create_time,
+               update_time,
+               uid,
+               group_concat(bt.tid separator ', ') tids
+        from blog.t_blog b inner join blog.t_blog_types bt on b.id = bt.bid
+        where b.id = #{id}
+    </select>
+
+    <!--查询单个-->
+    <select id="queryByTitle" resultMap="BlogMap">
+        select id,
+               title,
+               description,
+               content,
+               first_picture,
+               flag,
+               views,
+               appreciation,
+               share_statement,
+               commentabled,
+               published,
+               recommend,
+               create_time,
+               update_time,
+               uid
+        from blog.t_blog
+        where title = #{tile}
+    </select>
+
+    <select id="queryByTitleOrTypeOrRecommend" parameterType="com.backend.po.SearchBlog" resultMap="BlogMap">
+        <choose>
+            <when test="title">
+                <bind name="pattern" value="'%' + title + '%'"/>
+            </when>
+            <otherwise>
+                <bind name="pattern" value="'%%'"/>
+            </otherwise>
+        </choose>
+        select b.id,
+               title,
+               description,
+               content,
+               first_picture,
+               flag,
+               views,
+               appreciation,
+               share_statement,
+               commentabled,
+               published,
+               recommend,
+               create_time,
+               update_time,
+               uid,
+               group_concat(t.name separator ', ') type
+        from blog.t_blog b inner join blog.t_blog_types bt on b.id = bt.bid inner join blog.t_type t on bt.tid = t.id
+        <where>
+            b.id in(
+            select b.id
+            from blog.t_blog b inner join blog.t_blog_types bt on b.id = bt.bid
+            <where>
+                <if test="title != null and title != ''">
+                    b.title like #{pattern}
+                </if>
+                <if test="tids != null and tids != ''">
+                    and bt.tid in
+                    <foreach collection="tids.split(',')" item="tid" index="index" separator="," open="(" close=")">
+                        #{tid}
+                    </foreach>
+                </if>
+                <if test="1 == 1">
+                    and b.recommend = #{recommend}
+                </if>
+            </where>
+            )
+        </where>
+        group by b.id
+    </select>
+
+    <select id="queryByTitleOrContent" parameterType="com.backend.po.SearchBlog" resultMap="BlogMap">
+        <bind name="pattern" value="'%' + query + '%'"/>
+        select id,
+               title,
+               description,
+               content,
+               first_picture,
+               flag,
+               views,
+               appreciation,
+               share_statement,
+               commentabled,
+               published,
+               recommend,
+               create_time,
+               update_time,
+               uid
+        from blog.t_blog
+        where title like #{pattern} or content like #{pattern}
+        order by create_time desc
+    </select>
+
+    <select id="queryAll" resultMap="BlogMap">
+        select *
+        from blog.t_blog
+    </select>
+
+    <!--通过主键修改数据-->
+    <update id="updateBlog">
+        update blog.t_blog
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="content != null and content != ''">
+                content = #{content},
+            </if>
+            <if test="firstPicture != null and firstPicture != ''">
+                first_picture = #{firstPicture},
+            </if>
+            <if test="flag != null and flag != ''">
+                flag = #{flag},
+            </if>
+            <if test="views != null">
+                views = #{views},
+            </if>
+            <if test="appreciation != null">
+                appreciation = #{appreciation},
+            </if>
+            <if test="shareStatement != null">
+                share_statement = #{shareStatement},
+            </if>
+            <if test="commentabled != null">
+                commentabled = #{commentabled},
+            </if>
+            <if test="published != null">
+                published = #{published},
+            </if>
+            <if test="recommend != null">
+                recommend = #{recommend},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="uid != null">
+                uid = #{uid},
+            </if>
+        </set>
+        where id = #{id};
+        delete
+        from blog.t_blog_types
+        where bid = #{id};
+        <if test="tids != null and tids != ''">
+            insert into blog.t_blog_types(bid, tid)
+            values
+            <foreach collection="tids.split(',')" item="tid" index="index" separator=",">
+                (#{id}, #{tid, jdbcType=INTEGER})
+            </foreach>
+        </if>
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteBlog">
+        delete
+        from blog.t_blog
+        where id = #{id};
+        delete
+        from blog.t_blog_types
+        where bid = #{id}
+    </delete>
+
+    <!--插入bid和tid对应-->
+    <insert id="saveBidAndTid">
+        <if test="bid != null and tids != null and tids != ''">
+            insert into blog.t_blog_types(bid, tid)
+            values
+            <foreach collection="tids.split(',')" item="tid" index="index" separator=",">
+                (#{bid}, #{tid, jdbcType=INTEGER})
+            </foreach>
+        </if>
+    </insert>
+</mapper>
+

@@ -1,0 +1,3 @@
+2021-08-28 00:58:31.509  INFO 2700 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-28 00:58:31.525  INFO 2700 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2021-08-28 00:58:31.530  INFO 2700 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.

@@ -1,0 +1,115 @@
+@import './center-bg.less';
+
+.headertop{
+    position: relative;
+	overflow: hidden;
+	height: 0;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-attachment: fixed;
+    }
+    &.pattern-center {
+        animation: header 1s
+    }
+    &.filter-undertint {
+        &:before {
+            background-color: rgba(255,255,255,.3)
+        }
+    }
+    &.filter-dim {
+        &:before {
+            background-color: rgba(0,0,0,.3)
+        }
+    }
+    &.filter-grid {
+        &:before {
+            background-image: url(https://cdn.lixingyong.com/img/Sakura/images/grid.png)
+        }
+    }
+    &.filter-dot {
+        &:before {
+            background-image: url(https://cdn.lixingyong.com/img/Sakura/images/dot.gif)
+        }
+    }
+}
+
+#banner_wave_1 {
+	width: auto;
+	height: 65px;
+	background: url("https://cdn.lixingyong.com/img/Sakura/images/wave1.png") repeat-x;
+	_filter: alpha(opacity=80);
+	position: absolute;
+	bottom: 0;
+	width: 400%;
+	left: -236px;
+	z-index: 5;
+	opacity: 1;
+	transition-property: opacity,bottom;
+    transition-duration: .4s,.4s;
+    animation: myfirst 25000ms linear infinite normal;
+    -moz-animation: banner-wave-1 25000ms linear infinite normal;
+    -webkit-animation: banner-wave-1 25000ms linear infinite normal;
+    -o-animation: banner-wave-1 25000ms linear infinite normal;
+}
+#banner_wave_2 {
+	width: auto;
+	height: 80px;
+	background: url("https://cdn.lixingyong.com/img/Sakura/images/wave2.png") repeat-x;
+	_filter: alpha(opacity=80);
+	position: absolute;
+	bottom: 0;
+	width: 400%;
+	left: 0;
+	z-index: 4;
+	opacity: 1;
+	transition-property: opacity,bottom;
+    transition-duration: .4s,.4s;
+    animation: banner-wave-2 60000ms linear infinite normal;
+    -moz-animation: banner-wave-2 60000ms linear infinite normal;
+    -webkit-animation: banner-wave-2 60000ms linear infinite normal;
+    -o-animation: banner-wave-2 60000ms linear infinite normal;
+}
+
+
+
+.headertop-down {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	cursor: pointer;
+    z-index: 5;
+    i {
+        font-size: 28px;
+        color: #fff;
+        -ms-transform: scale(1.5,1);
+        -webkit-transform: scale(1.5,1);
+        transform: scale(1.5,1)
+    }
+}
+
+.banner_wave_hide,.banner_wave_hide_fit_skin {
+	opacity: 0 !important;
+	bottom: -999px !important
+}
+
+@media (max-width:860px) {
+    .headertop{
+        &.filter-dot {
+            &:before {
+                background-image: url(https://cdn.lixingyong.com/img/Sakura/images/grid.png)
+            }
+        }
+    }
+	#banner_wave_1,#banner_wave_2 {
+		display: none
+    }
+    .headertop-down {
+		display: none
+	}
+}

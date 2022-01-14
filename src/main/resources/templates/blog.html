@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客详情页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css">
+    <link rel="stylesheet" href="../static/css/typo.css">
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/lib/prism/prism.css">
+    <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
+</head>
+<body>
+    <!--导航-->
+    <nav class="ui inverted attached segment m-padded-tb-mini m-shadow-small">
+        <div class="ui container">
+            <div class="ui inverted secondary stackable menu">
+                <h2 class="ui teal header item">Blog</h2>
+                <a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i> 首页</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i> 分类</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i> 标签</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i> 归档</a>
+                <a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i> 关于我</a>
+                <div class="right m-item aligned item m-mobile-hide">
+                    <div class="ui icon inverted transparent input">
+                        <input type="text" placeholder="Search....">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <a href="#" class="ui menu toggle black icon button m-position-top-right m-mobile-show">
+                    <i class="sidebar icon"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--中间内容-->
+    <div class="m-padded-tb-big m-container m-padded-tb-huge animate__animated animate__fadeIn">
+        <div class="ui container">
+            <div class="ui segments">
+                <!--头部-->
+                <div class="ui segment">
+                    <div class="ui horizontal link list">
+                        <div class="item">
+                            <img src="https://img-blog.csdnimg.cn/20200701111419245.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Z4dDEwMTc3NDg2NjQ=,size_16,color_FFFFFF,t_70" alt="" class="ui avatar image">
+                            <div class="content"><a href="" class="header">OrangeSummer</a></div>
+                        </div>
+                        <div class="item">
+                            <i class="calendar icon"></i> 2021-5-20
+                        </div>
+                        <div class="item">
+                            <i class="eye icon"></i> 123
+                        </div>
+                    </div>
+                </div>
+                <!--图片区域-->
+                <div class="ui segment">
+                    <img src="https://img-blog.csdnimg.cn/20200701111419245.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Z4dDEwMTc3NDg2NjQ=,size_16,color_FFFFFF,t_70" alt="" class="ui fluid rounded image">
+                </div>
+                <!--正文-->
+                <div id="waypoint" class="ui attached padded segment">
+                    <div class="ui right aligned basic segment">
+                        <div class="ui orange basic label">原创</div>
+                    </div>
+                    <!--标题-->
+                    <h2 class="ui centered header">Vue入门</h2>
+                    <br>
+                    <!--内容-->
+                    <div id="content" class="typo typo-selection js-toc-content m-padded-lr-responsive m-padded-tb">
+                        <h1 id="前言">前言</h1>
+                        <p>前端开发模式的发展</p>
+                        <blockquote>
+                            <p>静态页面</p>
+                        </blockquote>
+                        <p>最初的网页以HTML为主，是纯静态的网页。网页是只读的，信息流只能从服务端到客户端单向流通。<strong>开发人员也只关心页面的样式和内容</strong>即可。</p>
+                        <blockquote>
+                            <p>异步刷新，操作DOM</p>
+                        </blockquote>
+                        <p>1995年，网景工程师Brendan Eich 花了10天时间设计了JavaScript语言.</p>
+                        <p>随着JavaScript的诞生，我们可以操作页面的DOM元素及样式，页面有了一些动态的效果，但是依然是以静态为主。</p>
+                        <p>ajax盛行：</p>
+                        <ul>
+                            <li>2005年开始，ajax逐渐被前端开发人员所重视，因为不用刷新页面就可以更新页面的数据和渲染效果。</li>
+                            <li>此时的<strong>开发人员不仅仅要编写HTML样式，还要懂ajax与后端交互，然后通过JS操作Dom元素来实现页面动态效果</strong>。比较流行的框架如Jquery就是典型代表。</li>
+                        </ul>
+                        <blockquote>
+                            <p>MVVM，关注模型和视图</p>
+                        </blockquote>
+                        <p>2008年，google的Chrome发布，随后就以极快的速度占领市场，超过IE成为浏览器市场的主导者。</p>
+                        <p>2009年，Ryan Dahl在谷歌的Chrome V8引擎基础上，打造了基于事件循环的异步IO框架：Node.js。</p>
+                        <ul>
+                            <li>基于事件循环的异步IO</li>
+                            <li>单线程运行，避免多线程的变量同步问题</li>
+                            <li>JS可以编写后台代码，前后台统一编程语言</li>
+                        </ul>
+                        <p>node.js的伟大之处不在于让JS迈向了后端开发，而是构建了一个庞大的生态系统。</p>
+                        <p>2010年，NPM作为node.js的包管理系统首次发布，开发人员可以遵循Common.js规范来编写Node.js模块，然后发布到NPM上供其他开发人员使用。目前已经是世界最大的包模块管理系统。</p>
+                        <p>随后，在node的基础上，涌现出了一大批的前端框架：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104051313_720.png" alt="" /></p>
+                        <blockquote>
+                            <p>MVVM模式</p>
+                        </blockquote>
+                        <ul>
+                            <li>M：即Model，模型，包括数据和一些基本操作</li>
+                            <li>V：即View，视图，页面渲染结果</li>
+                            <li>VM：即View-Model，模型与视图间的双向操作（无需开发人员干涉）</li>
+                        </ul>
+                        <p>在MVVM之前，开发人员从后端获取需要的数据模型，然后要通过DOM操作Model渲染到View中。而后当用户操作视图，我们还需要通过DOM获取View中的数据，然后同步到Model中。</p>
+                        <p>而MVVM中的VM要做的事情就是把DOM操作完全封装起来，开发人员不用再关心Model和View之间是如何互相影响的：</p>
+                        <ul>
+                            <li>只要我们Model发生了改变，View上自然就会表现出来。</li>
+                            <li>当用户修改了View，Model中的数据也会跟着改变。</li>
+                        </ul>
+                        <p>把开发人员从繁琐的DOM操作中解放出来，把关注点放在如何操作Model上。</p>
+                        <p><img src="http://cdn.sakurac.cn/202104051604_723.png" alt="" /></p>
+                        <p>而我们今天要学习的，就是一款MVVM模式的框架：Vue</p>
+                        <h1 id="1认识vue">1.认识Vue</h1>
+                        <p>Vue (读音 /vjuː/，类似于 <strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与<a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank">现代化的工具链</a>以及各种<a href="https://github.com/vuejs/awesome-vue#libraries--plugins" target="_blank">支持类库</a>结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
+                        <p>​	前端框架三巨头：Vue.js、React.js、AngularJS，vue.js以其轻量易用著称，vue.js和React.js发展速度最快，AngularJS还是老大。</p>
+                        <p>官网：https://cn.vuejs.org/</p>
+                        <p>参考：https://cn.vuejs.org/v2/guide/</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060747_856.png" alt="" /></p>
+                        <p>Git地址：https://github.com/vuejs</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060748_460.png" alt="" /></p>
+                        <p><strong>尤雨溪</strong>，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。</p>
+                        <h1 id="2node和npm">2.Node和NPM</h1>
+                        <p>前面说过，NPM是Node提供的模块管理工具，可以非常方便的下载安装很多前端框架，包括Jquery、AngularJS、VueJs都有。为了后面学习方便，我们先安装node及NPM工具。</p>
+                        <h2 id="21下载nodejs">2.1.下载Node.js</h2>
+                        <p>下载地址：https://nodejs.org/en/</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060750_809.png" alt="" /></p>
+                        <p>推荐下载LTS版本。</p>
+                        <p>课程中采用的是8.11.3版本。也是目前最新的。大家自行下载或者使用课前资料中提供的安装包。然后下一步安装即可。</p>
+                        <p>完成以后，在控制台输入：</p>
+                        <pre><code class="language-powershell">node -v
+                        </code></pre>
+                        <p>看到版本信息：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060756_364.png" alt="" /></p>
+                        <h2 id="22npm">2.2.NPM</h2>
+                        <p>Node自带了NPM了，在控制台输入<code>npm -v</code>查看：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060756_289.png" alt="" /></p>
+                        <p>npm默认的仓库地址是在国外网站，速度较慢，建议大家设置到淘宝镜像。但是切换镜像是比较麻烦的。推荐一款切换镜像的工具：nrm</p>
+                        <p>我们首先安装nrm，这里<code>-g</code>代表全局安装。可能需要一点儿时间</p>
+                        <pre class="line-numbers"><code class="language-powershell">npm install nrm -g
+                        </code></pre>
+                        <p><img src="http://cdn.sakurac.cn/202104060757_180.png" alt="" /></p>
+                        <p>然后通过<code>nrm ls</code>命令查看npm的仓库列表,带*的就是当前选中的镜像仓库：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060758_731.png" alt="" /></p>
+                        <p>通过<code>nrm use taobao</code>来指定要使用的镜像源：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061239_24.png" alt="" /></p>
+                        <p>然后通过<code>nrm test npm</code>来测试速度：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061240_434.png" alt="" /></p>
+                        <p><strong>注意：</strong></p>
+                        <p>如果 nrm ls有报错，修改npm\node_modules\nrm\cli.js 17行为：</p>
+                        <p>//const NRMRC = path.join(process.env.HOME, '.nrmrc'); (删除)
+                            const NRMRC = path.join(process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'], '.nrmrc');</p>
+                        <h1 id="3快速入门">3.快速入门</h1>
+                        <p>接下来，我们快速领略下vue的魅力</p>
+                        <h2 id="31创建工程">3.1.创建工程</h2>
+                        <p>创建一个新的空工程：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060835_501.png" alt="" /></p>
+                        <p><img src="http://cdn.sakurac.cn/202104060835_512.png" alt="" /></p>
+                        <p>然后新建一个module：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060836_499.png" alt="" /></p>
+                        <p>选中static web，静态web项目：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060836_979.png" alt="" /></p>
+                        <p>位置信息：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104060836_847.png" alt="" /></p>
+                        <h2 id="32安装vue">3.2.安装vue</h2>
+                        <h3 id="321下载安装">3.2.1.下载安装</h3>
+                        <p>下载地址：https://github.com/vuejs/vue</p>
+                        <p>可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip</p>
+                        <p>下载解压，得到vue.js文件。</p>
+                        <h3 id="322使用cdn">3.2.2.使用CDN</h3>
+                        <p>或者也可以直接使用公共的CDN服务：</p>
+                        <pre><code class="language-html">&lt;!-- 开发环境版本，包含了用帮助的命令行警告 --&gt;
+                        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+                        </code></pre>
+                        <p>或者：</p>
+                        <pre><code class="language-html">&lt;!-- 生产环境版本，优化了尺寸和速度 --&gt;
+                        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;
+                        </code></pre>
+                        <h3 id="323推荐npm安装">3.2.3.推荐npm安装</h3>
+                        <p>在idea的左下角，有个Terminal按钮，点击打开控制台：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061004_959.png" alt="" /></p>
+                        <p>进入hello-vue目录，先输入：<code>npm init -y</code> 进行初始化</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061004_761.png" alt="" /></p>
+                        <p>安装Vue，输入命令：<code>npm install vue --save</code></p>
+                        <p><img src="http://cdn.sakurac.cn/202104061004_942.png" alt="" /></p>
+                        <p>然后就会在hello-vue目录发现一个node_modules目录，并且在下面有一个vue目录。</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061004_523.png" alt="" /></p>
+                        <p>node_modules是通过npm安装的所有模块的默认位置。</p>
+                        <h2 id="33vue入门案例">3.3.vue入门案例</h2>
+                        <h3 id="331html模板">3.3.1.HTML模板</h3>
+                        <p>在hello-vue目录新建一个HTML</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061011_28.png" alt="" /></p>
+                        <p>在hello.html中，我们编写一段简单的代码：</p>
+                        <p><img src="http://cdn.sakurac.cn/202104061012_888.png" alt="" /></p>
+                        <p>h2中要输出一句话：xx 非常帅。前面的xx是要渲染的数据。</p>
+                        <h3 id="332vue声明式渲染">3.3.2.vue声明式渲染</h3>
+                        <p>然后我们通过Vue进行渲染：</p>
+                    </div>
+                    <!--标签-->
+                    <div class="m-padded-lr-responsive m-padded-tb">
+                        <a href="#" target="_blank" class="ui basic teal label">Vue</a>
+                    </div>
+                    <!--赞赏-->
+                    <div class="ui center aligned basic segment">
+                        <button id="paybotton" class="ui orange basic circular button">赞赏</button>
+                    </div>
+                    <!--二维码-->
+                    <div class="ui payQR flowing popup transition hidden">
+                        <div class="ui orange basic label">
+                            <div class="ui small images" style="font-size: inherit !important;">
+                                <div class="image">
+                                    <img src="../static/images/二维码.webp" alt="" class="ui image bordered">
+                                    <p>支付宝</p>
+                                </div>
+                                <div class="image">
+                                    <img src="../static/images/二维码.webp" alt="" class="ui image bordered">
+                                    <p>微信</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--博客信息-->
+                <div class="ui attached positive message">
+                    <div class="ui middle aligned grid">
+                        <div class="eleven wide column">
+                            <ur>
+                                <li>作者：管理员（联系作者）</li>
+                                <li>发表时间：2021-04-06 20:38</li>
+                                <li>版权声明：自由转载-非商用-非衍生-保持署名</li>
+                                <li>公众号转载：请在文末添加作者公众号二维码</li>
+                            </ur>
+                        </div>
+                        <div class="five wide column">
+                            <img src="../static/images/二维码.webp" alt="" class="ui right floated small rounded bordered image">
+                        </div>
+                    </div>
+                </div>
+                <!--评论区-->
+                <div id="comment-container" class="ui segment">
+                    <div class="ui teal segment">
+                        <div class="ui comments">
+                            <h3 class="ui dividing header">Comments</h3>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/images/背景.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Matt</a>
+                                    <div class="metadata">
+                                        <span class="date">今天下午 5:42</span>
+                                    </div>
+                                    <div class="text">太赞了！ </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/images/背景.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Elliot Fu</a>
+                                    <div class="metadata">
+                                        <span class="date">昨天上午12:30</span>
+                                    </div>
+                                    <div class="text">
+                                        <p>這對我的研究是非常有用.謝謝!</p>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comments">
+                                    <div class="comment">
+                                        <a class="avatar">
+                                            <img src="../static/images/背景.jpg">
+                                        </a>
+                                        <div class="content">
+                                            <a class="author">Jenny Hess</a>
+                                            <div class="metadata">
+                                                <span class="date">刚刚</span>
+                                            </div>
+                                            <div class="text">艾略特你永远是多么正确 :) </div>
+                                            <div class="actions">
+                                                <a class="reply">Reply</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="../static/images/背景.jpg">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Joe Henderson</a>
+                                    <div class="metadata">
+                                        <span class="date">5 天以前</span>
+                                    </div>
+                                    <div class="text">老兄，这太棒了。非常感谢。 </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="ui reply form">
+                                <div class="field">
+                                    <textarea name="content" placeholder="请输入评论信息..."></textarea>
+                                </div>
+                                <div class="fields">
+                                    <div class="field m-mobile-wide m-margin-tb-tiny">
+                                        <div class="ui left icon input">
+                                            <i class="ui user icon"></i>
+                                            <input type="text" name="nickname" placeholder="姓名">
+                                        </div>
+                                    </div>
+                                    <div class="field m-mobile-wide m-margin-tb-tiny">
+                                        <div class="ui left icon input">
+                                            <i class="ui mail icon"></i>
+                                            <input type="text" name="email" placeholder="邮箱">
+                                        </div>
+                                    </div>
+                                    <div class="field m-mobile-wide m-margin-tb-tiny">
+                                        <div class="ui teal labeled submit icon button m-mobile-wide">
+                                            <i class="edit icon"></i> Add Reply
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--侧栏-->
+    <div id="toolbar" class="m-padded-lr m-fixed m-position-middle-right animate__animated animate__fadeIn" style="display: none">
+        <div class="ui vertical icon buttons">
+            <button id="toc" class="ui teal button">目录</button>
+            <a href="#comment-container" class="ui teal button">留言</a>
+            <button id="wechat" class="ui icon teal button"><i class="wechat icon"></i></button>
+            <button id="toTop-button" class="ui icon teal button"><i class="chevron up icon"></i></button>
+        </div>
+    </div>
+    <!--目录-->
+    <div class="ui toc-container flowing popup transition hidden" style="width: 250px !important;">
+        <ol class="js-toc"></ol>
+    </div>
+    <!--手机扫码-->
+    <div id="qrcode" class="ui wechat-qr flowing popup transition hidden " style="width: 130px !important;">
+    <!--<img src="./static/images/二维码.webp" alt="" class="ui rounded image" style="width: 120px !important;">-->
+    </div>
+
+
+    <!--底部footer-->
+    <footer class="ui inverted vertical segment m-padded-tb-massive">
+        <div class="ui center aligned container">
+            <div class="ui inverted divided stackable grid">
+                <div class="three wide column">
+                    <div class="ui inverted link list">
+                        <div class="item">
+                            <img src="../static/images/二维码.webp" class="ui rounded image" alt="" style="width: 110px">
+                        </div>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <div class="ui inverted link list">
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                        <a href="" class="item">用户故事</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                    <p class="m-opacity-mini m-text-thin m-text-spaced">本博客是自己通过代码构建的。前端html，后端java技术。对这些技术有兴趣的朋友可以联系我，我们一起学习进步。</p>
+                </div>
+            </div>
+            <div class="ui inverted section divider"></div>
+            <p class="m-text-spaced m-text-thin m-opacity-mini m-opacity-big">Copyright © 2020 - 2021  CPP   Designed by Chen pingping 桂ICP备20002883号-1
+            </p>
+        </div>
+
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.1.3/jquery.scrollTo.min.js"></script>
+<script src="../static/lib/prism/prism.js"></script>
+<script src="../static/lib/tocbot/tocbot.min.js"></script>
+<script src="../static/lib/qrcode/qrcode.min.js"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+    <script>
+        <!--移动端隐藏标签-->
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide')
+        });
+
+        //显示二维码
+        $('#paybotton').popup({
+            popup : $('.payQR.popup'),
+            on    : 'click',
+            position: 'bottom center'
+        });
+
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+
+        //显示目录
+        $('#toc').popup({
+            popup : $('.toc-container.popup'),
+            on    : 'click',
+            position: 'left center'
+        });
+
+        //手机扫码
+        $('#wechat').popup({
+            popup : $('.wechat-qr.popup'),
+            position: 'left center'
+        });
+
+        var qrcode = new QRCode("qrcode", {
+            text: "http://jindo.dev.naver.com/collie",
+            width: 110,
+            height: 110,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        //移动到顶部
+        $('#toTop-button').click( function (){
+            $(window).scrollTo(0,500);
+        });
+        //滚动侦测
+        var waypoint = new Waypoint({
+            element: document.getElementById('waypoint'),
+            handler: function(direction) {
+                if (direction === 'down') {
+                    $('#toolbar').show();
+                } else {
+                    $('#toolbar').hide();
+                }
+                console.log('Scrolled to waypoint!  ' + direction);
+                console.log('Scrolled to waypoint!'+direction)
+            }
+        })
+
+    </script>
+</body>
+</html>
